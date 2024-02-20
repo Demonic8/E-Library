@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/sti"
+        android:layout_alignParentTop="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="90dp"
+        android:text="STI College Vigan E-Library"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <ImageButton
+        android:id="@+id/navigation_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/navbtn"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/sti"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <ImageView
+        android:layout_width="67dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/stilogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/Gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="120dp"
+        tools:layout_editor_absoluteY="-2dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/Gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="350dp"
+        tools:layout_editor_absoluteY="-2dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LightGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="353dp"
+        tools:layout_editor_absoluteY="-2dp" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/books"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Books"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="365dp"/>\
+    <TextView
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELLOWORLD"
+        android:id="@+id/user_details"
+        android:textSize="25sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/logout"
+        android:id="@+id/logout"/>
+</RelativeLayout>

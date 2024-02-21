@@ -73,7 +73,7 @@
         android:id="@+id/registerNow"
         android:text="Register"
         android:textSize="20sp"
-
+        android:textColor="@color/LightBlue"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:layout_width="match_parent"

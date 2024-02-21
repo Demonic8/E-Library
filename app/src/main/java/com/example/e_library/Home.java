@@ -1,5 +1,6 @@
 package com.example.e_library;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,17 +12,19 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
-    private ImageButton navButton;
-
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ImageButton navButton;
     FirebaseAuth auth;
-Button button;
-TextView textView;
-FirebaseUser user;
+    Button button;
+    TextView userName;
+    FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,44 +32,34 @@ FirebaseUser user;
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        user = auth.getCurrentUser();
         drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
         navButton = findViewById(R.id.navigation_button);
-        navButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
-                    drawerLayout.openDrawer(GravityCompat.START);
-                }
+        user = auth.getCurrentUser();
+   View headerView = navigationView.getHeaderView(0);
+   userName = headerView.findViewById(R.id.user_name);
+// Displaying Name in to the Header
+        if (user != null) {
+            userName.setText(user.getDisplayName());
+        }
+        // Set up the navigation view item click listener
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.logout:
+                    signOut();
+                    return true;
+                default:
+                    return false;
             }
         });
-
-        if (user == null){
-            Intent intent = new Intent(getApplicationContext(), login.class);
-            startActivity(intent);
-            finish();
-        }
-        else {
-            textView.setText(user.getEmail());
-        }
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getApplicationContext(), login.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        // Set up the navigation button click listener
+        navButton.setOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
     }
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
-            drawerLayout.closeDrawer(GravityCompat.END);
-        } else {
-            super.onBackPressed();
-        }
+
+    private void signOut() {
+        auth.signOut();
+        Intent intent = new Intent(getApplicationContext(), login.class);
+        startActivity(intent);
+        finish();
     }
 }

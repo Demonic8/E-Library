@@ -26,14 +26,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Email"
             android:layout_width="265dp"
-            android:layout_height="41dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/curvature"
             android:backgroundTint="@color/mwep"
             android:ems="10"
-            android:hint="Ex. JuanPedro.25661@vigan.sti.edu.ph"
+            android:hint="Email"
             android:textAlignment="center"
-            android:textSize="12dp" />
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +43,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:layout_width="265dp"
-            android:layout_height="41dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/curvature"
@@ -51,8 +51,7 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
-
-            android:textSize="12dp" />
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <ProgressBar
         android:id="@+id/progressBar"

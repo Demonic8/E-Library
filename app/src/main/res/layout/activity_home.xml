@@ -104,13 +104,6 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="365dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/logout"
-        android:id="@+id/logout"/>
     </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"

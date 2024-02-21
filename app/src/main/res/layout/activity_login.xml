@@ -7,7 +7,10 @@
     android:gravity="center"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".login">
+    tools:context=".login"
+    >
+
+
 
     <ImageView
         android:layout_width="163dp"
@@ -22,42 +25,58 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Email"
-
-            android:layout_width="238dp"
+            android:layout_width="265dp"
             android:layout_height="41dp"
             android:layout_gravity="center"
             android:background="@drawable/curvature"
+            android:backgroundTint="@color/mwep"
             android:ems="10"
             android:hint="Ex. JuanPedro.25661@vigan.sti.edu.ph"
             android:textAlignment="center"
             android:textSize="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="411dp"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            android:hint="@string/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_width="265dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/curvature"
+            android:backgroundTint="@color/mwep"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+
+            android:textSize="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
     <ProgressBar
         android:id="@+id/progressBar"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/btn_Login"
-        android:text="Login"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbutton"
+        android:shadowColor="@color/mwep"
+        android:text="Login"
+        android:layout_marginTop="20dp"/>
+
     <TextView
         android:id="@+id/registerNow"
-        android:text="@string/click_to_register"
+        android:text="Register"
         android:textSize="20sp"
-        android:textStyle="bold"
+
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

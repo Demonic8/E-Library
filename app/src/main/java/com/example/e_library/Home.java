@@ -21,7 +21,6 @@ public class Home extends AppCompatActivity {
     NavigationView navigationView;
     ImageButton navButton;
     FirebaseAuth auth;
-    Button button;
     TextView userName;
     FirebaseUser user;
 
@@ -31,20 +30,24 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         auth = FirebaseAuth.getInstance();
-        button = findViewById(R.id.logout);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         navButton = findViewById(R.id.navigation_button);
         user = auth.getCurrentUser();
-   View headerView = navigationView.getHeaderView(0);
-   userName = headerView.findViewById(R.id.user_name);
-// Displaying Name in to the Header
-        if (user != null) {
-            userName.setText(user.getDisplayName());
-        }
+
+
         // Set up the navigation view item click listener
         navigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
+                case R.id.collection:
+                    goToCollectionPage();
+                    return true;
+                case R.id.history:
+                    goToHistoryPage();
+                    return true;
+                case R.id.about:
+                    goToAboutPage();
+                    return true;
                 case R.id.logout:
                     signOut();
                     return true;
@@ -54,12 +57,29 @@ public class Home extends AppCompatActivity {
         });
         // Set up the navigation button click listener
         navButton.setOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
+        View headerView = navigationView.getHeaderView(0);
+        TextView userEmailTextView = headerView.findViewById(R.id.user_email);
+        userEmailTextView.setText(user.getEmail());
     }
 
+    private void goToCollectionPage() {
+        Intent intent = new Intent(this, Collection.class);
+        startActivity(intent);
+    }
+    private void goToHistoryPage() {
+        Intent intent = new Intent(this, History.class);
+        startActivity(intent);
+    }
+
+    private void goToAboutPage() {
+        Intent intent = new Intent(this, About.class);
+        startActivity(intent);
+    }
     private void signOut() {
         auth.signOut();
         Intent intent = new Intent(getApplicationContext(), login.class);
         startActivity(intent);
         finish();
     }
+
 }

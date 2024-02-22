@@ -15,16 +15,16 @@
         android:layout_height="80dp"
         android:background="@color/sti"
         android:layout_alignParentTop="true"/>
+
         <ImageButton
             android:id="@+id/navigation_button"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@drawable/navbtn"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/sti"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            />
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/sti"
+            android:src="@drawable/navbtn" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="52dp"

@@ -72,6 +72,12 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                if (!email.contains("@vigan.sti.edu.ph")) {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(Register.this, "Invalid Email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

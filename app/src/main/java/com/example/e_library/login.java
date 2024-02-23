@@ -24,7 +24,7 @@ public class login extends AppCompatActivity {
     Button buttonLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    TextView textView;
+    TextView register, forgetpword;
 
     @Override
     public void onStart() {
@@ -46,11 +46,20 @@ public class login extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.btn_Login);
         progressBar = findViewById(R.id.progressBar);
-        textView = findViewById(R.id.registerNow);
-        textView.setOnClickListener(new View.OnClickListener() {
+        register = findViewById(R.id.registerNow);
+        forgetpword = findViewById(R.id.forgetpassword);
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        forgetpword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), forgotpassword.class);
                 startActivity(intent);
                 finish();
             }
@@ -71,6 +80,11 @@ public class login extends AppCompatActivity {
                     Toast.makeText(login.this, "", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (!email.contains("@vigan.sti.edu.ph")) {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(login.this, "Invalid Email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -84,7 +98,7 @@ public class login extends AppCompatActivity {
                                     finish();
                                 } else {
 
-                                    Toast.makeText(login.this, "Authentication failed.",
+                                    Toast.makeText(login.this, "Incorrect Email or Password",
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

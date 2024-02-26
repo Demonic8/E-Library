@@ -1,7 +1,5 @@
 package com.example.e_library;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,11 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,8 +28,8 @@ public class forgotpassword extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         emailEditText = findViewById(R.id.Email);
         sendVerificationCodeButton = findViewById(R.id.Verificationbtn);
+
         sendVerificationCodeButton.setOnClickListener(new View.OnClickListener() {
-            //Entering the email that wish to change password
             @Override
             public void onClick(View v) {
                 String email = emailEditText.getText().toString().trim();
@@ -41,7 +38,7 @@ public class forgotpassword extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter your email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //Looking for the email in firebase and will move to the next layout
+
                 mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

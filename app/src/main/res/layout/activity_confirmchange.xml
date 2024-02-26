@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".verifycode">
-
+    tools:context=".confirmchange">
     <View
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -15,49 +14,37 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="-2dp" />
-
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"
-        android:text="An E-mail has sent to your inbox Enter the code in the box below "
-        android:textSize="24sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextCode"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="numberPassword"
-        android:layout_gravity="center"
-        android:hint="6-Digit"
-        android:textAlignment="center"
         android:layout_marginTop="30dp"
-        />
-    <TextView
-        android:id="@+id/resendvcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resend"
-        android:textColor="@color/LightBlue"
-        android:textSize="24sp"
+        android:textColor="@color/sti"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="You have successfully change your
+Password!"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
-
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/sti"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Please go back to the log-in page to
+proceed."
+        android:textSize="20dp" />
     <Button
-        android:id="@+id/verifybtn"
-        android:layout_width="117dp"
+        android:id="@+id/returnloginbtn"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="190dp"
         android:backgroundTint="@color/sti"
-        android:text="Enter"
+        android:text="Return To Log-in"
         android:textColor="@color/white"
         android:textStyle="bold" />
-
 </LinearLayout>

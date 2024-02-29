@@ -66,6 +66,7 @@ public class About extends AppCompatActivity {
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
+
     private void goToCollectionPage() {
         Intent intent = new Intent(this, Collection.class);
         startActivity(intent);

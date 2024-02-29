@@ -71,6 +71,7 @@ public class About extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     private void goToHistoryPage() {
         Intent intent = new Intent(this, History.class);
         startActivity(intent);

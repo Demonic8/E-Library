@@ -10,7 +10,8 @@
     <RelativeLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <View
             android:layout_width="match_parent"
@@ -20,8 +21,8 @@
 
         <ImageButton
             android:id="@+id/navigation_button"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="61dp"
+            android:layout_height="54dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
@@ -120,6 +121,17 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/chatbotbutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_chat_24"
+            android:layout_marginTop="620dp"
+            android:background="@color/white"
+            android:layout_marginLeft="330dp"
+            />
+
 
     </RelativeLayout>
 

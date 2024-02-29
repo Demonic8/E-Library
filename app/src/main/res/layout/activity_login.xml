@@ -14,7 +14,7 @@
         android:layout_width="163dp"
         android:layout_height="131dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="90dp"
         android:src="@drawable/stilogo6" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +30,7 @@
             android:background="@drawable/curvature"
             android:backgroundTint="@color/Gray"
             android:ems="10"
-            android:hint="Email"
+            android:hint=" Email"
             android:textSize="18sp"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -48,7 +48,7 @@
             android:background="@drawable/curvature"
             android:backgroundTint="@color/Gray"
             android:ems="20"
-            android:hint="Password"
+            android:hint=" Password"
             android:inputType="textPassword"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>

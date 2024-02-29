@@ -16,10 +16,12 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import javax.security.auth.callback.CallbackHandler;
+
 public class Home extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ImageButton navButton;
+    ImageButton navButton, chatBotButton;
     FirebaseAuth auth;
     TextView userName;
     FirebaseUser user;
@@ -33,6 +35,7 @@ public class Home extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         navButton = findViewById(R.id.navigation_button);
+        chatBotButton = findViewById(R.id.chatbotbutton);
         user = auth.getCurrentUser();
 
 
@@ -55,11 +58,20 @@ public class Home extends AppCompatActivity {
                     return false;
             }
         });
-        // Set up the navigation button click listener
+        //Navigation button click listener
         navButton.setOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
         View headerView = navigationView.getHeaderView(0);
         TextView userEmailTextView = headerView.findViewById(R.id.user_email);
         userEmailTextView.setText(user.getEmail());
+        //Chatbot Button click listener
+        chatBotButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, ChatBot.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void goToCollectionPage() {

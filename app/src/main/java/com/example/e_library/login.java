@@ -111,6 +111,7 @@ public class login extends AppCompatActivity {
                                 } else {
                                     errorText.setText("Incorrect Email or Password");
                                     errorText.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+
                                 }
                             }
                         });

@@ -76,56 +76,70 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="-2dp" />
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="130dp"
+            android:text="Recommandation"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
         <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="155dp"
             android:background="@color/Gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="-2dp" />
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/LightGray"
+            android:verticalScrollbarPosition="left"
+            android:layout_marginTop="160dp"
+            />
         <View
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="353dp"
-            android:background="@color/LightGray"
+            android:layout_height="3dp"
+            android:layout_marginTop="320dp"
+            android:background="@color/Gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="-2dp" />
-\
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="224dp"
-            android:layout_marginTop="125dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/stiviganbuilding" />
-
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="350dp"
-            android:src="@drawable/books" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="365dp"
-            android:text="Books"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="335dp"
+            android:text="Recently Added"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/LightGray"
+            android:verticalScrollbarPosition="left"
+            android:layout_marginTop="370dp"
+            />
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="365dp"
+        android:background="@color/Gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-2dp" />
         <ImageButton
             android:id="@+id/chatbotbutton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:src="@drawable/baseline_chat_24"
             android:layout_marginTop="620dp"
             android:background="@color/white"

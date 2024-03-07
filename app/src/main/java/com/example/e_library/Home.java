@@ -37,7 +37,6 @@ public class Home extends AppCompatActivity {
         navButton = findViewById(R.id.navigation_button);
         user = auth.getCurrentUser();
 
-
         // Set up the navigation view item click listener
         navigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {

@@ -6,10 +6,26 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fist Nane"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/user_firstName"
+        android:textSize="26sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/user_lastName"
+        android:textSize="26sp"/>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="UserName"
+    android:text="Email"
     android:textStyle="bold"
     android:textColor="@color/white"
     android:id="@+id/user_email"

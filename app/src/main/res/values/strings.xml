@@ -7,5 +7,7 @@
     <string name="click_to_login">Click to login</string>
     <string name="click_to_register">Click to register</string>
     <string name="logout">Logout</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
 
 </resources>
